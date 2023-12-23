@@ -5,14 +5,14 @@ files:
     destination: /var/www/html/express-app
 hooks:
   ApplicationStop:
-    - location: scripts/application_stop.sh
+    - location: /src/scripts/application_stop.sh
       timeout: 1000
       runas: root
   BeforeInstall:
-    - location: scripts/before_install.sh
+    - location: /src/scripts/before_install.sh
       timeout: 1000
       runas: root
   ApplicationStart:
-    - location: scripts/application_start.sh
+    - location: /src/scripts/application_start.sh
       timeout: 1000
       runas: root
